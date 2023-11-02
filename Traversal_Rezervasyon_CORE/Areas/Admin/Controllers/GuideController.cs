@@ -54,14 +54,14 @@ namespace TraversalCoreProje.Areas.Admin.Controllers
                 return View();
             }
         }
-        [Route("EditGuide")]
+        [Route("EditGuide/{id}")]
         [HttpGet]
         public IActionResult EditGuide(int id)
         {
             var values = _guideService.TGetById(id);
             return View(values);
         }
-        [Route("EditGuide")]
+        [Route("EditGuide/{id}")]
         [HttpPost]
         public IActionResult EditGuide(Guide guide)
         {
